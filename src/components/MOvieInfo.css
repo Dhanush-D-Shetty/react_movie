@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root{
+    --text-clr:#4a5c6c;
+    --bg-clr:#f2f4fc;
+    --border-clr:rgb(156,175,193);
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--bg-clr);
+}
+
+/* container */
+.cards-container{               
+    max-width: 140rem;
+    margin: auto;
+    border: 2px solid white;
+    padding: 3rem;
+}
+/* .grid{
+    display: grid;
+    gap: 3rem;
+} */
+
+/* grid-4-col */
+.grid-col{
+    display: grid;
+    gap:3rem;
+    grid-template-columns: repeat(4,1fr);
+}
+.card{
+    width: 22rem;   max-width: 27rem;
+    min-height: 30rem;
+    border-radius: 1rem;
+    display: flex ; justify-content: center;align-items: center;
+}
+a{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 3.2rem 1rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    color: var(--text-clr);
+    border: 0.2rem solid var(--border-clr);
+    transition: all 0.7s linear;
+}
+a:hover{
+    background-color: var(--text-clr);
+    color: var(--bg-clr);
+}
+a:hover h2{
+    color: var(--bg-clr);
+    transform: translateY(-2.0rem);
+    display: inline-block;
+}
+a:hover img{
+    transform:scale(1.1);
+}
+
+h2{
+    color: var(--text-clr);
+    font-size: 2rem;
+}
+
+img{
+    min-width: 10rem;
+    max-height: 30rem;
+    border-radius: 2rem;
+}
+
+@media screen  and (max-width: 1200px){
+
+    .cards-container{               
+        max-width: 110rem;
+        margin: auto;  
+    }
+
+    .grid-col{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+@media screen  and (max-width: 1000px){
+
+    .cards-container{               
+        max-width: 90rem;
+        margin: auto;  
+    }
+
+    .grid-col{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+@media screen  and (max-width: 770px){
+
+    .cards-container{               
+        max-width: 70rem;
+        margin: auto;  
+    }
+
+    .grid-col{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+                       /* search bar */
+.search-section{
+    width: 60vw;
+    height: 10vh;
+    margin: 4vh auto;
+    /* padding: 2vh 5vw; */
+    text-align: center;
+}
+.search-section form div input{
+    width: 80%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+}
